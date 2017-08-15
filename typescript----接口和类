@@ -1,0 +1,42 @@
+interface LabelledValue {
+  label: string;
+}
+
+function printLabel(labelledObj: LabelledValue) {
+  console.log(labelledObj.label);
+}
+
+let myObj = {size: 10, label: "Size 10 Object"};
+printLabel(myObj);
+//上面是一段简单的接口代码 接口声明用interface来声明
+
+interface SquareConfig {
+  color?: string;
+  width?: number;
+}
+可选属性的接口在后面加了一个?
+
+只读属性readonly
+interface Point {
+    readonly x: number;
+    readonly y: number;
+} 
+let p1: Point = { x: 10, y: 20 };
+p1.x = 5; // error!
+
+const vs readyonly
+做为变量使用时用const,做为属性时用readyonly
+
+
+类class
+class Greeter {
+  greeting: string;
+  constructor(message:string) {
+    this.greeting = message;
+  }
+  greet () {
+    return 'hello, ' + this.greeting;
+  }
+}
+
+let greeter = new Greeter('world');
