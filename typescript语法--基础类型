@@ -1,0 +1,24 @@
+1.枚举--------------enum
+el:     enum Color {Red, Green, Blue}
+        let c: Color = Color.Green;----------默认情况下是从0开始编号
+        
+el:     enum Color {Red=1,Green,Blue}
+        let c: Color = Color.Green;
+        
+enum Color {Red =1, Green, Blue};
+let colorName: string = Color[2];--------------------Green
+
+2. Any------类检查器不会检查直接通过检查阶段
+3.void-----像是与Any类型相反，当返回为空的时候一般都是用void代替
+el:let unusable: void = undefined;
+el:   function warnUser(): void {
+         alert("This is my warning message");
+     }
+     
+     
+在typescript中null 和undefined是所有类型的子类 但是：当你指定了--strictNullChecks标记，null和undefined只能赋值给void和它们各自
+
+
+
+5.Never类型------表示那些永不存在的元素。
+     
